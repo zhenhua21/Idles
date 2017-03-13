@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vp_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:layout_gravity="bottom"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:translationY="5dp"
+        android:translationZ="20dp"
+        android:background="#FFFFFF">
+
+        <Button
+            android:id="@+id/main_bt_browse"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="浏览"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:textColor="#0990BD"
+            android:background="#E6E6FA"/>
+
+        <Button
+            android:id="@+id/main_bt_plus"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="新品"
+            android:textSize="18sp"
+            android:textColor="#000000"
+            android:background="#E6E6FA"/>
+
+        <Button
+            android:id="@+id/main_bt_user"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="我"
+            android:textSize="18sp"
+            android:textColor="#000000"
+            android:background="#E6E6FA"/>
+
+    </LinearLayout>
+
+</FrameLayout>
+
+<!--<android.support.v4.view.PagerTabStrip-->
+<!--android:id="@+id/vp_indicator"-->
+<!--android:layout_width="match_parent"-->
+<!--android:layout_height="wrap_content"-->
+<!--android:padding="5dp"-->
+<!--android:layout_gravity="bottom"/>-->

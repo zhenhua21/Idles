@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="150dp"
+    android:padding="10dp"
+    android:elevation="10dp"
+    android:background="@drawable/rectangle"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/ly_tv_item"
+        android:layout_weight="2"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:gravity="center|left"
+        android:ellipsize="end"
+        android:fontFamily="monospace"
+        android:text="狮门影业官方正式宣布《疾速追杀》续集启动，原作双导演大卫·雷奇和查德·斯塔尔斯基以及编剧德里克·科尔斯塔均回归续集制作" />
+
+    <ImageView
+        android:id="@+id/ly_iv_img"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:src="@mipmap/ic_launcher"/>
+
+</LinearLayout>
