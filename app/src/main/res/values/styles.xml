@@ -27,8 +27,19 @@
     <style name="user_ly_R_settings">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">50dp</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:layout_marginTop">1dp</item>
         <item name="android:orientation">horizontal</item>
-        <item name="android:background">@drawable/chunk_r</item>
+    </style>
+
+    <style name="top_navigation_bar">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:layout_gravity">top</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">#90CFCECE</item>
+        <item name="android:textSize">20dp</item>
+        <item name="android:textColor">#000000</item>
     </style>
 
 </resources>

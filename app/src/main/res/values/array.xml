@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="idles_class">
+        <item>----点击选择----</item>
+        <item>电子</item>
+        <item>书籍</item>
+        <item>运动</item>
+        <item>衣物</item>
+        <item>乐器</item>
+        <item>鞋靴</item>
+        <item>箱包</item>
+        <item>其他</item>
+    </string-array>
+</resources>

@@ -3,25 +3,28 @@
     <item
         android:right="1dp">
         <shape android:shape="rectangle">
-            <stroke android:color="#909090"
-                android:width="1dp"/>
-            <solid android:color="#f0f0f0"/>
-        </shape>
-    </item>
-    <item
-        android:right="2dp">
-        <shape android:shape="rectangle">
-            <stroke android:color="#909090"
-                android:width="1dp"/>
-            <solid android:color="#f0f0f0"/>
+            <stroke android:color="#EBF7F5F5"
+                android:width="2dp"/>
+            <corners android:radius="3dp"/>
+            <solid android:color="#EBF7F5F5"/>
         </shape>
     </item>
     <item
         android:right="3dp">
         <shape android:shape="rectangle">
-            <stroke android:color="#909090"
-                android:width="1dp"/>
-            <solid android:color="#f0f0f0"/>
+            <stroke android:color="#EBEDECEC"
+                android:width="2dp"/>
+            <corners android:radius="3dp"/>
+            <solid android:color="#EBEDECEC"/>
+        </shape>
+    </item>
+    <item
+        android:right="4dp">
+        <shape android:shape="rectangle">
+            <stroke android:color="#EBE6E6E6"
+                android:width="2dp" />
+            <corners android:radius="3dp"/>
+            <solid android:color="#EBE6E6E6"/>
         </shape>
     </item>
 </layer-list>

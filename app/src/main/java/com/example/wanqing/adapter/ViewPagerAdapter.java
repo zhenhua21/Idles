@@ -16,17 +16,17 @@ import java.util.ArrayList;
  */
 
 public class ViewPagerAdapter extends FragmentPagerAdapter{
-    private Context baseContext;
+    //private Context baseContext;
     private ArrayList<Fragment> mFragments = new ArrayList<Fragment>();
 
     public ViewPagerAdapter(FragmentManager fm, Context baseContext) {
         super(fm);
 
-        mFragments.add(BrowseListFragment.newInstance("Browse", baseContext));
+        mFragments.add(BrowseListFragment.newInstance("Browse"));
         mFragments.add(PlusFragment.newInstance("Plus"));
         mFragments.add(UserFragment.newInstance("User"));
 
-        this.baseContext = baseContext;
+        //this.baseContext = baseContext;
     }
 
     @Override
@@ -38,6 +38,7 @@ public class ViewPagerAdapter extends FragmentPagerAdapter{
     @Override
     public int getCount() {
         return mFragments.size();
+
     }
 
 }

@@ -1,6 +1,5 @@
-package com.example.wanqing.idles;
+package com.example.wanqing.activity;
 
-import android.content.res.ColorStateList;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.view.ViewPager;
@@ -8,13 +7,13 @@ import android.view.View;
 import android.widget.Button;
 
 import com.example.wanqing.adapter.ViewPagerAdapter;
+import com.example.wanqing.idles.R;
 
 public class MainActivity extends FragmentActivity {
 
     private ViewPager mViewPager;
     private ViewPagerAdapter mAdapter;
     private Button mBrowse, mPlus, mUser;
-    //main_bt_browse, main_bt_plus, main_bt_user;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

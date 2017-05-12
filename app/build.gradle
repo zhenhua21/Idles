@@ -3,6 +3,9 @@ apply plugin: 'com.android.application'
 android {
     compileSdkVersion 25
     buildToolsVersion "25.0.2"
+
+    useLibrary 'org.apache.http.legacy'
+
     defaultConfig {
         applicationId "com.example.wanqing.idles"
         minSdkVersion 19
@@ -26,5 +29,37 @@ dependencies {
     })
     compile 'com.android.support:appcompat-v7:25.1.1'
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
+
+    //以下SDK开发者请根据需要自行选择
+    //bmob-sdk：Bmob的android sdk包，包含了Bmob的数据存储、文件等服务，以下是最新的bmob-sdk:
+    //3.5.0：请务必查看下面注释[1]
+    compile 'cn.bmob.android:bmob-sdk:3.5.0'
+    //bmob-push：Bmob的推送包
+    compile 'cn.bmob.android:bmob-push:0.8'
+    //bmob-im：Bmob的即时通讯包，注意每个版本的im依赖特定版本的bmob-sdk，具体的依赖关系可查看下面注释[1]
+    compile 'cn.bmob.android:bmob-im:2.0.5@aar'
+    compile 'cn.bmob.android:bmob-sdk:3.4.7-aar'
+    //如果你想应用能够兼容Android6.0，请添加此依赖(org.apache.http.legacy.jar)
+    compile 'cn.bmob.android:http-legacy:1.0'
+
+    //类似于线性布局，有自动换行功能
+    compile 'com.google.android:flexbox:0.2.5'
+
+    //基于https的图片加载，imageView
+    compile 'com.github.bumptech.glide:glide:3.5.2'
+
+    //listView的升级版
+    compile 'com.android.support:recyclerview-v7:25.1.1'
+
+    //聊天的气泡
+    compile 'com.cpiz.bubbleview:bubbleview:1.0.2'
+
+    //接收消息后在应用内传送消息
+    compile 'org.greenrobot:eventbus:3.0.0'
+
+    //图片自动轮播效果
+    compile 'com.jude:rollviewpager:1.4.6'
+
     testCompile 'junit:junit:4.12'
 }
+

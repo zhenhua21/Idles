@@ -8,40 +8,42 @@
     <LinearLayout
         android:id="@+id/user_information"
         android:layout_width="match_parent"
-        android:layout_height="170dp"
+        android:layout_height="160dp"
+        android:layout_marginBottom="30dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:gravity="center_horizontal"
         android:orientation="vertical"
-        android:background="@drawable/card_rb_shadow">
+        android:background="@drawable/chunk_rb">
 
         <ImageView
             android:id="@+id/user_iv_img"
             android:layout_weight="2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
             android:gravity="center"
             android:src="@mipmap/ic_launcher"/>
 
         <TextView
             android:layout_weight="1"
-            android:id="@+id/user_tv_title"
-            android:layout_width="match_parent"
+            android:id="@+id/user_tv_name"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:gravity="center_horizontal"
             android:text="Page3"/>
 
         <TextView
             android:layout_weight="1"
-            android:id="@+id/user_tv_name"
-            android:layout_width="match_parent"
+            android:id="@+id/user_tv_introduce"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:gravity="center_horizontal"
             android:text="Page3222"/>
 
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/user_ly_mMessage"
-        style="@style/user_ly_R_settings"
-        android:layout_marginTop="30dp">
+        android:background="@drawable/chunk_r"
+        style="@style/user_ly_R_settings">
 
         <TextView
             style="@style/user_tv_settings"
@@ -50,34 +52,23 @@
         <ImageView style="@style/setting_arrow" />
     </LinearLayout>
 
-    <LinearLayout
-        android:id="@+id/user_ly_mIdle"
-        style="@style/user_ly_R_settings">
 
-        <TextView
-            style="@style/user_tv_settings"
-            android:text="我的闲置" />
-
-        <ImageView style="@style/setting_arrow" />
-    </LinearLayout>
 
     <LinearLayout
         android:id="@+id/user_ly_mDeal"
+        android:background="@drawable/chunk_r"
         style="@style/user_ly_R_settings">
 
         <TextView
-            android:id="@+id/textView"
             style="@style/user_tv_settings"
-            android:text="我的交易" />
+            android:text="我的购买" />
 
         <ImageView style="@style/setting_arrow" />
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/user_ly_mAddress"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:orientation="horizontal"
+        style="@style/user_ly_R_settings"
         android:background="@drawable/chunk_rb">
 
         <TextView

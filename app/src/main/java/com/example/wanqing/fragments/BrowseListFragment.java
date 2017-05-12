@@ -1,15 +1,22 @@
 package com.example.wanqing.fragments;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
 import android.support.annotation.Nullable;
 import android.support.v4.app.ListFragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 
+import com.example.wanqing.adapter.BrowseListAdapter;
 import com.example.wanqing.idles.R;
+
+import static com.example.wanqing.IdleApplication.UPDATE_IDLE_LIST;
 
 /**
  * Created by dahuahua on 2017/3/9.
@@ -23,47 +30,54 @@ import com.example.wanqing.idles.R;
 * */
 
 public class BrowseListFragment extends ListFragment {
-    private static Context base_context;
-    private String title;
+    private static BrowseListAdapter adapter = null;
+    private TextView mTextView;
+
     /**
      * Create a new instance of CountingFragment, providing "num"
      * as an argument.
      */
-    public static BrowseListFragment newInstance(String title, Context context) {
+    public static BrowseListFragment newInstance(String title) {
         BrowseListFragment fragment = new BrowseListFragment();
-
-        Bundle args = new Bundle();
-        args.putString("title", title);
-
-        base_context = context;
-        fragment.setArguments(args);
 
         return fragment;
     }
 
-    /**
-     * When creating, retrieve this instance's number from its arguments.
-     */
-    @Override
-    public void onCreate(@Nullable Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-
-        title = getArguments().getString("title");
-    }
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater,@Nullable ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.listfragment_browse, container, false);
 
+        InitView(view);
+
+
+
         return view;
     }
 
-    @Override
-    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
-        super.onActivityCreated(savedInstanceState);
+    private void InitView(View view) {
+        adapter = new BrowseListAdapter(getContext(), R.layout.layout_item);
+        LinearLayout search = (LinearLayout) view.findViewById(R.id.browse_search);
 
-        setListAdapter(new ArrayAdapter<String>(base_context,
-                android.R.layout.simple_list_item_1));
+        search.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent("android.intent.action.SearchActivity"));
+            }
+        });
+
+        setListAdapter(adapter);
     }
+
+    public static class BrowseListHandler extends Handler {
+        @Override
+        public void handleMessage(Message msg) {
+            if (msg.what == UPDATE_IDLE_LIST) {
+                if (adapter != null)
+                    adapter.setDate();
+            }
+        }
+    }
+
 }
